@@ -1,0 +1,58 @@
+@import url('./_reset.css');
+
+body {
+  background-color: #f9f9fb;
+  color: var(--text-lighter);
+  font-family: ui-sans-serif, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  --text-normal: #131720;
+  --text-light: #3e424c;
+  --text-lighter: #6a7181;
+  --text-lightest: #9ca2b0;
+
+  --border: 1px solid var(--text-lightest);
+
+  width: 50%;
+
+  &> * { width: 100%; }
+}
+
+/* default styling for headers */
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h6 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
