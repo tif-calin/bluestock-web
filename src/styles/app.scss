@@ -1,1 +1,20 @@
 @import url('./_style.scss');
+
+@import url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons.css');
+
+.anicon {
+  font-family: 'Anicons Color', 'Anicons Regular', sans-serif !important;
+  cursor: pointer;
+  font-variation-settings: 'TIME' 1;
+  transition: font-variation-settings 0.15s ease;
+
+  input { display: none };
+
+  &:hover {
+    font-variation-settings: 'TIME' 50;
+  }
+
+  &> input:checked  + span {
+    font-variation-settings: 'TIME' 100;
+  }
+}

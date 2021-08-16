@@ -1,7 +1,10 @@
 import { text2gradient } from './utils';
 
 const filterPaper = obj => {
-  return obj;
+  const { genre, year } = obj;
+  if (genre !== 'journal-article') return false;
+  if (year < 2021) return false;
+  return true;
 };
 
 const mungePaper = obj => ({

@@ -8,7 +8,11 @@ const Item = ({ item }) => {
       className="Item"
       title={JSON.stringify(item, null, 2)}
     >
-      <div style={{ background: item.journal_gradient }}></div>
+      {/* <div style={{ background: item.journal_gradient }}></div> */}
+      <label className="anicon">
+        <input type="checkbox" value="P"/>
+        <span>P</span>
+      </label>
       <span>{item.title}</span>
     </li>
   </>;
