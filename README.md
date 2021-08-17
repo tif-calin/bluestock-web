@@ -26,6 +26,7 @@ back-end
     - password
  - comments
     - user_id
+    - thing_id
  - collections
     - user_id
  - collection_members

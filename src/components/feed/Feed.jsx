@@ -2,28 +2,32 @@
 import React from 'react';
 import { useData } from '../../state/state';
 import Item from './Item';
-import About from './About';
+import Login from './Login';
 import '../../styles/feed.scss';
 
 const Feed = () => {
 
-  const { data } = useData();
+  const { loading, data, user, login, signup, star } = useData();
 
   return <>
     <div className="Feed">
       <h1>bluestock</h1>
-      {/* <p>bluestock aims to utilize the power of the crowd to overcome insitutional barriers keeping people from</p> */}
-      <About/>
+      {/* <p>bluestock aims to utilize the power of the crowd to overcome insitutional barriers keeping people from</p>
+      <About/> */}
+      <Login user={user} login={login} signup={signup}/>
 
       <hr/>
-      <span>{data.length} articles found</span>
+      <span>{data.length} things found</span>
       <hr/>
 
-      <ul>
-        {data.map(doi => <>
-          <Item key={doi.doi} item={doi}/>
-        </>)}
-      </ul>
+      {loading 
+        ? <span>loading...</span>
+        : <ul>
+          {data.map(thing => (
+            <Item key={thing.id} item={thing} star={star} user={user}/>
+          ))}
+        </ul>
+      }
     </div>
   </>;
 };
