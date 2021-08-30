@@ -1,5 +1,5 @@
-const API = 'https://floating-plains-94010.herokuapp.com/api/v1';
-//const API = 'http://localhost:7890';
+// const API = 'http://localhost:7890';
+const API = 'https://sitesitesitesite.herokuapp.com/api/v1/things';
 
 const signUp = async login => 
   await fetch(
@@ -24,7 +24,9 @@ const signIn = async login =>
 ;
 
 const getThings = async () => 
-  await fetch(`${API}/things/`).then(res => res.json())
+  await fetch(`${API}/things/`)
+    .then(res => res.json())
+    .then(json => json.status > 200 ? [] : json)
 ;
 
 const starThing = async star => 
@@ -39,7 +41,6 @@ const starThing = async star =>
 ;
 
 const unStarThing = async ({ thingId, userId }) => {
-  console.log(thingId, userId);
   return await fetch(
     `${API}/stars/${thingId}/${userId}`,
     { 

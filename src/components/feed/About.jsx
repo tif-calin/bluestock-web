@@ -6,7 +6,6 @@ const About = () => {
     <div className="About">
       <details>
         <summary>what is bluestock?</summary>
-        
         <p>
           bluestock takes any list of things and a schema outlining the properties of those things and gives you powerful functionality to:
         </p>

@@ -27,7 +27,10 @@ const Item = ({ item, user, star }) => {
 
       <span>{item.stars.length}</span>
       
-      <span><a href={thing.site}>{thing.name}</a></span>
+      <div>
+        <span><a href={thing.site}>{thing.name}</a></span>
+        <span>{thing.desc}</span>
+      </div>
     </li>
   </>;
 };

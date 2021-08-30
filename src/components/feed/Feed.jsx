@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { useData } from '../../state/state';
+import { useData } from '../../state/state.js';
 import Item from './Item';
 import Login from './Login';
 import '../../styles/feed.scss';
@@ -12,8 +12,6 @@ const Feed = () => {
   return <>
     <div className="Feed">
       <h1>bluestock</h1>
-      {/* <p>bluestock aims to utilize the power of the crowd to overcome insitutional barriers keeping people from</p>
-      <About/> */}
       <Login user={user} login={login} signup={signup}/>
 
       <hr/>
