@@ -1,5 +1,5 @@
 // const API = 'http://localhost:7890';
-const API = 'https://sitesitesitesite.herokuapp.com/api/v1/things';
+const API = 'https://sitesitesitesite.herokuapp.com/api/v1';
 
 const signUp = async login => 
   await fetch(
