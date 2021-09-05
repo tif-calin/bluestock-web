@@ -31,7 +31,10 @@ module.exports = {
     new webpack.EnvironmentPlugin(env),
     new CopyPlugin({
       patterns: [{ from: 'public' }],
-    }),
+    }),    
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify(process.env.API_URL),
+    })
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
