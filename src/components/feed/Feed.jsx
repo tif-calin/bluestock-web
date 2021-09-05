@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { useData } from '../../state/state.js';
-import Item from './Item';
+import ItemSite from './ItemSite';
 import Login from './Login';
 import '../../styles/feed.scss';
 
@@ -22,7 +22,7 @@ const Feed = () => {
         ? <span>loading...</span>
         : <ul>
           {data.map(thing => (
-            <Item key={thing.id} item={thing} star={star} user={user}/>
+            <ItemSite key={thing.id} item={thing} star={star} user={user}/>
           ))}
         </ul>
       }

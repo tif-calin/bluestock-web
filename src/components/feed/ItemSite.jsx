@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Item = ({ item, user, star }) => {
+const ItemSite = ({ item, user, star }) => {
 
-  const { thing } = item;
+  const { thing: site } = item;
 
   const handleCheck = e => {
     e.preventDefault();
     if (user) star(item.id);
+  };
+
+  const style = {
+    backgroundColor: `${item.thing?.css_overview?.background_color}`,
+    color: `${item.thing?.css_overview?.text_color}`,
+    fontFamily: item.thing?.css_overview?.top_font
   };
 
   return <>
@@ -27,18 +33,18 @@ const Item = ({ item, user, star }) => {
 
       <span>{item.stars.length}</span>
       
-      <div>
-        <span><a href={thing.site}>{thing.name}</a></span>
-        <span>{thing.desc}</span>
+      <div style={style}>
+        <h4><a href={site.site}>{site.name}</a></h4>
+        <p>{site.desc}</p>
       </div>
     </li>
   </>;
 };
 
-Item.propTypes = {
+ItemSite.propTypes = {
   item: PropTypes.object,
   user: PropTypes.string,
   star: PropTypes.func
 };
 
-export default Item;
+export default ItemSite;
