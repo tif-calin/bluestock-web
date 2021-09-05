@@ -16,11 +16,12 @@
         border-radius: 0.25rem;
       }
 
-      &> *:last-child {
+      &> div:last-child {
         background-color: #fff;
         padding: 0.5rem;
         border-radius: 0.5rem;
         border: var(--border);
+        width: 100%;
       }
     }
   }

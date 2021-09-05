@@ -18,8 +18,10 @@ body {
   --border: 1px solid var(--text-lightest);
 
   width: 50%;
+  min-width: 300px;
+  max-width: 1000px;
 
-  &> * { width: 100%; }
+  & > * { width: 100%; }
 }
 
 /* default styling for headers */
