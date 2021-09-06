@@ -1,14 +1,5 @@
 @import url('./_reset.css');
 
-body {
-  background-color: #f9f9fb;
-  color: var(--text-lighter);
-  font-family: ui-sans-serif, -apple-system, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #root {
   --text-normal: #131720;
   --text-light: #3e424c;
@@ -22,6 +13,15 @@ body {
   max-width: 1000px;
 
   & > * { width: 100%; }
+}
+
+body {
+  background-color: #f9f9fb;
+  color: var(--text-lighter);
+  font-family: ui-sans-serif, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* default styling for headers */

@@ -11,9 +11,10 @@ const ItemSite = ({ item, user, star }) => {
   };
 
   const style = {
-    backgroundColor: `${item.thing?.css_overview?.background_color}`,
-    color: `${item.thing?.css_overview?.text_color}`,
-    fontFamily: item.thing?.css_overview?.top_font
+    backgroundColor: `${site?.css_overview?.background_color}`,
+    color: `${site?.css_overview?.text_color}`,
+    fontFamily: site?.css_overview?.body_font 
+      || site?.css_overview?.top_font
   };
 
   return <>
@@ -34,7 +35,10 @@ const ItemSite = ({ item, user, star }) => {
       <span>{item.stars.length}</span>
       
       <div style={style}>
-        <h4><a href={site.site}>{site.name}</a></h4>
+        <h4>
+          <a href={site.site}>{site.name}</a>
+          {site.open && <a href={site.open}>🌐</a>}
+        </h4>
         <p>{site.desc}</p>
       </div>
     </li>

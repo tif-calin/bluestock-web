@@ -1,4 +1,6 @@
 .Feed {
+  margin-bottom: 2rem;
+
   ul {
     display: flex;
     flex-direction: column;
@@ -22,6 +24,21 @@
         border-radius: 0.5rem;
         border: var(--border);
         width: 100%;
+
+        h4 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          a:last-child {
+            font-size: 1rem;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
       }
     }
   }
@@ -33,5 +50,6 @@
 
   &> span {
     color: blue;
+    cursor: pointer;
   }
 }
