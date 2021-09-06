@@ -1,12 +1,13 @@
 /* eslint-disable no-undef */
 const webpack = require('webpack');
+const dotenv = require('dotenv');
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const env = Object.entries({
-  ...require('dotenv').config(),
+  ...dotenv.config(),
   ...process.env,
 }).reduce((acc, [key, value]) => {
   acc[key] = value;
