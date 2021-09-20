@@ -2,19 +2,20 @@
 
 This project is made possible through the generous support of [OurResearch](https://ourresearch.org/)'s [Unpaywall](https://unpaywall.org/)
 
-## todo for basic requirements
- - [ ] make backend simply serve the data
- - [ ] allow frontend to create user
- - [ ] simple starring ability
-
 ## todo
 front-end:
- - details pages for each item
- - comments
- - vote on tags
- - add to collection
+ - [ ] a little comments button on the left to take you to the details page
+ - [ ] sort, filter, search
+ - [ ] stats
+ - [ ] on the right: 
+    - up/down for given tag
+    - button to add to collections (similar to yt playlists)
+    - ... to change tag
+ - [ ] details page
+    - ability to contribute info
+    - comments
 
-back-end
+## data model
  - lists
     - name
     - schema
