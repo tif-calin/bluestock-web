@@ -23,9 +23,6 @@ const Login = ({ user, login, signup }) => {
     {user 
       ? <button onClick={() => login(null)}>sign out</button>
       : <form onSubmit={handleSubmit}>
-        <span onClick={toggleInNotUp}>
-          {inNotUp ? 'Need an account?' : 'Already have an account?'}
-        </span>
 
         <input name="username" type="text" placeholder="username"/>
         <input name="password" type="password" placeholder="password"/>
@@ -36,6 +33,9 @@ const Login = ({ user, login, signup }) => {
         >
           sign {inNotUp ? 'in' : 'up'}
         </button>
+        <span onClick={toggleInNotUp}>
+          {inNotUp ? 'Need an account?' : 'Already have an account?'}
+        </span>
       </form>
     }
   </div>;

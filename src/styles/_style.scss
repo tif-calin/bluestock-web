@@ -1,12 +1,19 @@
+@import url('./_normalize.css');
 @import url('./_reset.css');
 
 #root {
-  --text-normal: #131720;
-  --text-light: #3e424c;
+  --clr-red: #f13c20;
+  --clr-light: #f9f9fb;
+  --clr-charcoal: #36454f;
+  --clr-dark: #11161a;
+
+  --clr-accent: var(--clr-red);
+  --text-normal: var(--clr-dark);
+  --text-light: var(--color-charcoal);
   --text-lighter: #6a7181;
   --text-lightest: #9ca2b0;
 
-  --border: 1px solid var(--text-lightest);
+  --border: 2px solid var(--clr-charcoal);
 
   width: 50%;
   min-width: 300px;
@@ -16,12 +23,33 @@
 }
 
 body {
-  background-color: #f9f9fb;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
   color: var(--text-lighter);
   font-family: ui-sans-serif, -apple-system, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* default for hr */
+hr {
+  border: var(--border);
+}
+
+/* default styling for inputs and buttons */
+input, button {
+  background: #fff;
+  border: 2px solid var(--clr-charcoal);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+button {
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* default styling for headers */

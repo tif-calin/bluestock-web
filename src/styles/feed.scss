@@ -44,12 +44,26 @@
   }
 }
 
-.Login form {
+.Login {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  &> span {
-    color: blue;
-    cursor: pointer;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 20rem;
+
+    input, button {
+      max-width: 20rem;
+      width: 100%;
+    }
+
+    &> span {
+      color: var(--clr-accent);
+      font-weight: 500;
+      cursor: pointer;
+    }
   }
 }

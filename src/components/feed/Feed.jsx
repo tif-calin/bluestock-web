@@ -12,10 +12,15 @@ const Feed = () => {
   return <>
     <div className="Feed">
       <h1>bluestock</h1>
+
+      <hr/>
+
       <Login user={user} login={login} signup={signup}/>
 
       <hr/>
+
       <span>{data.length} things found</span>
+      
       <hr/>
 
       {loading 
